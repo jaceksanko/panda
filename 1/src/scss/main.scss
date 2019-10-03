@@ -63,9 +63,12 @@
 			}
 			.articles-container {
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
 				flex-wrap: wrap;
-				justify-content: center;
+				justify-content: start;
+				@media (max-width: 1040px) {
+					flex-direction: row;
+				}
 				.blue-article {
 					width: 225px;
 					display: flex;
@@ -96,7 +99,6 @@
 				.blue-article--tablet-width {
 					@media (max-width: 1040px) {
 						width: 100%;
-						flex-grow: 2;
 					}
 				}
 				.blue-article--one {
