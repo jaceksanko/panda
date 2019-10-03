@@ -22,6 +22,12 @@ function templateTask(done) {
   done();
 }
 
+function imageCopy(done) {
+  src('./layout/grass.jpg')
+    .pipe(dest('./disc/img/'));
+  done();
+}
+
 function watchFiles() {
   watch('./src/scss/', series(cssTask, reload));
   watch('./*.html', series(templateTask, reload));
@@ -45,5 +51,5 @@ function cleanUp() {
   return del(['./disc/*']);
 }
 
-exports.dev = parallel( cssTask, templateTask, watchFiles, liveReload);
-exports.build = series(cleanUp, parallel( cssTask, templateTask));
+exports.dev = parallel( cssTask, imageCopy, templateTask, watchFiles, liveReload);
+exports.build = series(cleanUp, imageCopy, parallel( cssTask, templateTask));
