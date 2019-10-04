@@ -20,3 +20,9 @@ Runs the app in the development mode and creates disc/css/main.bundle.css and di
 ### `gulp build`
 
 Builds the app for production to the `disc` folder.
+
+# Task 3 
+
+Link to jsfiddle:
+
+### `https://jsfiddle.net/jaceksanko/x5nvk6e4/`

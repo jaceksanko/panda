@@ -47,7 +47,7 @@
 
   //second soluction
   FontSwatch.prototype.bindEvents = function () {
-    this.swatch.find('.swatch-item').on('click',{ objectFontSwatch: this }, this.handleSwatchClick.bind(this));
+    this.swatch.find('.swatch-item').on('click', this.handleSwatchClick.bind(this));
   };
 
   FontSwatch.prototype.handleSwatchClick = function (e) {
